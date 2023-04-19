@@ -1,0 +1,16 @@
+{% extends 'veterinaria/base.html' %}
+
+{% load static %}
+
+{% block title %}Productos{% endblock %}
+
+{% block content %}
+<center><h1>Editar Producto</h1></center>
+<div class="container text-center">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Editar Producto</button>
+    </form>
+</div>
+{% endblock %}
